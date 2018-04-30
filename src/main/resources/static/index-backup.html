@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+<!-- Mobile Specific Meta -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Favicon-->
+<link rel="shortcut icon" href="img/fav.png">
+<!-- Author Meta -->
+<meta name="author" content="codepixer">
+<!-- Meta Description -->
+<meta name="description" content="">
+<!-- Meta Keyword -->
+<meta name="keywords" content="">
+<!-- meta character set -->
+<meta charset="UTF-8">
+
+<script type="text/javascript" src="js/settings.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/actions.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	
+
+<!-- Site Title -->
+<title>Panda Go!</title>
+<!-- END META SECTION -->
+<!-- 
+ <link
+	href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+	rel="stylesheet"> 
+ -->
+<!--
+<!-- CSS INCLUDE -->
+<link rel="stylesheet" href="css/linearicons.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css" />
+
+</head>
+
+<body ng-app="userManagerApp" ng-controller="userManagerController">
+      <div class="login-container" ng-controller="userManagerController">
+	 <div class="row align-items-center justify-content-between d-flex">
+				 <div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				</div> 
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="index.php">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="bus.html">Bus</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="contact.html">Contact</a></li>						
+					</ul>
+				</nav>
+			</div>
+
+
+
+	<!-- start banner Area -->
+	<section class="banner-area relative" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div
+				class="row fullscreen d-flex align-items-center justify-content-center">
+				<div class="banner-content col-lg-7 col-md-6 ">
+					<h6 class="text-white ">the Royal Essence of Journey</h6>
+					<h1 class="text-white text-uppercase">Panda Go</h1>
+					<p class="pt-20 pb-20 text-white">Provide you with the Relaxed
+						Journey Ever!</p>
+					<a href="#" class="primary-btn text-uppercase">Book your Trip
+						NOW</a>
+				</div>
+				<div class="col-lg-5  col-md-6 header-right">
+					<h4 class="text-white pb-30">Book Your Bus Trip Today!</h4>
+				<form id="jvalidate" role="form" class="form-horizontal">
+					<div class="panel-body">
+				<!-- 	<form class="form" role="form" autocomplete="off"> -->
+						
+						
+						
+						
+						
+						
+						
+						<!-- <div class="form-group row"> -->
+							<div class="col-md-12">
+								<button ng-click="submit()" type="submit" name="submit"
+									class="btn btn-default btn-lg btn-block text-center text-uppercase">Book Your trip</button>
+							</div>
+						 </div> 
+					 </form> 
+				</div>
+			</div>
+		</div>
+	</section>
+	
+				<div class="login-footer">
+				<div class="pull-left">&copy; 2018 RallyBus</div>
+				<!-- 
+				<div class="pull-right">
+					<a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact Us</a>
+				</div>
+				-->
+			</div>
+	<!-- End banner Area -->
+
+
+	<!-- START PAGE CONTAINER 
+	<div class="container">
+	
+		 START PAGE SIDEBAR 
+		<div class="page-sidebar">
+			<ul class="x-navigation">
+				<li class="xn-logo"><a href="index.html">Rally Bus</a> <a
+					href="#" class="x-navigation-control"></a></li>
+				<li class="xn-profile"><a href="#" class="profile-mini"> <img
+						src="assets/images/users/avatar.jpg" alt="John Doe" />
+				</a>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="assets/images/users/avatar.jpg" alt="pic missing" />
+						</div>
+						<div class="profile-data">
+							<div class="profile-data-name"></div>							
+						</div>	
+					</div>
+				</li>
+			</ul>
+		</div>
+		 END PAGE SIDEBAR -->
+
+
+
+
+	<!-- PAGE CONTENT 
+		<div class="page-content">
+		
+			<ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+
+				
+				<li class="xn-icon-button pull-right"><a href="#"
+					class="mb-control" data-box="#mb-signout"> <span
+						class="fa fa-sign-out"></span></a></li>
+				
+
+			</ul>
+
+			<div class="page-title">
+				<h2><span class="fa fa-arrow-circle-o-left"></span> Home page</h2>
+			</div>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+		</div>
+		<div class="common-modal modal fade" id="common-Modal1" tabindex="-1"
+			role="dialog" aria-hidden="true">
+			<div class="modal-content">
+				<ul class="list-inline item-details">
+					<li><a
+						href="http://themifycloud.com/downloads/janux-premium-responsive-bootstrap-admin-dashboard-template/">Admin
+							templates</a></li>
+					<li><a href="http://themescloud.org">Bootstrap themes</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+	<!-- END PAGE CONTAINER -->
+
+
+	<!-- MESSAGE BOX
+	<div class="message-box animated fadeIn" data-sound="alert"
+		id="mb-signout">
+		<div class="mb-container">
+			<div class="mb-middle">
+				<div class="mb-title">
+					<span class="fa fa-sign-out"></span><strong>Log Out?</strong>
+				</div>
+				<div class="mb-content">
+					<p>Are you sure you want to log out?</p>
+					<p>Press No if you want to continue work. Press Yes to logout
+						current user.</p>
+				</div>
+				<div class="mb-footer">
+					<div class="pull-right">
+						<a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+						<button class="btn btn-default btn-lg mb-control-close">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	 END MESSAGE BOX-->
+<!-- START SCRIPTS -->
+	<!-- START PLUGINS -->
+	<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+	<!-- END PLUGINS -->
+	<!-- THIS PAGE PLUGINS -->
+	<script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+	<script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+	<script type='text/javascript' src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+	<script type='text/javascript' src='js/plugins/bootstrap/bootstrap-select.js'></script>
+	<script type='text/javascript' src='js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
+	<script type='text/javascript' src='js/plugins/validationengine/jquery.validationEngine.js'></script>
+	<script type='text/javascript' src='js/plugins/jquery-validation/jquery.validate.js'></script>
+	<script type='text/javascript' src='js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
+	<!-- END THIS PAGE PLUGINS -->
+	<!-- START TEMPLATE -->
+	<script type="text/javascript" src="js/settings.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/actions.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<!-- END TEMPLATE -->
+
+
+	<script type="text/javascript">
+		/* var app = angular.module("app", []);
+		app.controller("HelloController", function($scope) {
+			//$scope.message = "Dr. Smith";	
+			$scope.message = $window.sessionStorage.getItem("userid");
+		}); */
+		
+		
+		var app = angular.module("userManagerApp", []);
+		app
+				.controller(
+						"userManagerController",
+						function($scope, $http) {
+							$http.defaults.headers.post["Content-Type"] = "application/json";
+							$scope.submit = function() {
+								window.location.replace("http://localhost:8080/view-profile.html");
+						
+								};
+								// add the user
+								
+							} // end of $scope.submit function
+						);
+		
+		
+		var jvalidate = $("#jvalidate").validate({
+			ignore : [],
+			rules : {
+				firstName : {
+					required : true,
+					minlength : 1,
+					maxlength : 50
+				},
+				lastName : {
+					required : true,
+					minlength : 1,
+					maxlength : 50
+				},
+				email : {
+					required : true,
+					email : true
+				},
+				password : {
+					required : true,
+					minlength : 5,
+					maxlength : 20
+				},
+				're-password' : {
+					required : true,
+					minlength : 5,
+					maxlength : 20,
+					equalTo : "#password2"
+				}
+			}
+		// end of rules
+		}); // end of validate
+		
+		
+	</script>
+		
+</body>
+</html>

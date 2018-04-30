@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/elements/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Rally Bus</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/nice-select.css">			
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/main.css">
+<!-- EOF CSS INCLUDE -->
+</head>
+<body ng-app="userManagerApp">
+
+ <header id="header" id="home">
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="index.html">Home</a></li>					
+						<li><a href="bus.html">Bus</a></li>
+						<li><a href="view-trip.html">Trip</a></li>	
+						<li><a href="pages-login.html">Log Out</a></li>
+				          
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Profile		
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="view-profile.html"> profile</a></p>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+			<section class="model-area section-gap" id="cars">
+				<div class="container">
+				<div class="page-content">
+				
+			<div class="page-title">
+				<h2>
+					<span class="fa fa-arrow-circle-o-left"></span> Profile
+				</h2>
+		
+			</div>
+				
+			<div class="page-content-wrap">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<!-- Implementation of Sprint 1 **************************************************-->
+					<!-- click on edit profile -->
+				
+					<div class="col-md-5">
+						<!-- START JQUERY VALIDATION PLUGIN -->
+						<div class="block" ng-controller="userManagerController">
+							<form id="jvalidate" role="form" class="form-horizontal" >
+								<!-- action="javascript:alert('Form #validate2 submited');"> -->
+								<div class="panel-body">
+									<!-- Email -->
+									
+													<!-- <div class="form-group"> -->
+					<!-- 				<div class="col-md-4 btn-group pull-right">
+						<button class="btn btn-primary" type="submit"
+							onclick="editable();">Edit Profile</button>
+					</div>
+					</div> -->
+									<div class="form-group">
+									
+									
+										<label class="col-md-3 control-label">Email:</label>
+										<div class="col-md-12">
+											<input style="color: #616161;" id="email" readonly
+												type="text" value="" ng-model="email" name="email"
+												class="form-control" /> <span class="help-block">Cannot
+												change</span>
+										</div>
+									</div>
+									<!-- First Name -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">First Name:</label>
+										<div class="col-md-12">
+											<input style="color: #616161;" id="firstName" readonly
+												type="text" ng-model="firstName" class="form-control"
+												value="" /> <span class="help-block">Cannot change</span>
+										</div>
+									</div>
+
+									<!-- Last Name -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">Last Name:</label>
+										<div class="col-md-12">
+											<input style="color: #616161;" id="lastName" readonly
+												type="text" ng-model="lastName" class="form-control"
+												value="" /> <span class="help-block">Cannot change</span>
+										</div>
+									</div>
+									<!-- Password -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">Password</label>
+										<div class="col-md-12">
+											<input style="color: #616161;" id="password" readonly
+												type="password" ng-model="password" class="form-control"
+												value="" />
+										</div>
+									</div>
+
+									<!-- Age -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">Age:</label>
+										<div class="col-md-12">
+											<input id="age" readonly type="number" class="form-control"
+												ng-blur="ageCheck()" name="age" ng-model="age" /> 
+												<span id="errorage" class="signupSpan" style="color:black"> </span>
+										</div>
+									</div>
+
+									<!-- Address 1 -->
+									<div class="form-group">
+										<label class="col-md-8 control-label">Address Line 1:</label>
+										<div class="col-md-12">
+											<input id="addressLine1" readonly type="text"
+												class="form-control" name="addressLine1"
+												ng-model="addressLine1" />
+										</div>
+									</div>
+									<!-- Address 2 -->
+									<div class="form-group">
+										<label class="col-md-8 control-label">Address Line 2:</label>
+										<div class="col-md-12">
+											<input id="addressLine2" readonly type="text"
+												class="form-control" name="addressLine2"
+												ng-model="addressLine2" />
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-md-3 control-label">City:</label>
+										<div class="col-md-12">
+											<input id="city" readonly type="text"
+												class="form-control" name="city"
+												ng-model="city" />
+										</div>
+									</div>
+							
+									<!-- State -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">State:</label>
+										<div class="col-md-12">
+											<input id="state" readonly type="text" class="form-control"
+												name="state" ng-model="state" />
+										</div>
+									</div>
+									<!-- Phone -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">Phone:</label>
+										<div class="col-md-12">
+											<input id="phone" readonly type="text"
+												class="mask_phone form-control" value="" ng-model="phone" />
+										</div>
+									</div>
+									<!-- Zip Code -->
+									<div class="form-group">
+										<label class="col-md-3 control-label">Zip Code:</label>
+										<div class="col-md-12">
+											<input id="zip" readonly type="text" class="form-control"
+												value="" ng-model="zip" />
+										</div>
+									</div>
+								
+									<div class="form-group">
+									<div class="col-md-6 btn-group pull-left">
+						<button class="btn btn-primary" type="submit"
+							onclick="editable();">Edit</button>
+					</div>
+					</div> 
+					
+								<!-- click on update -->
+								<div class="form-group">
+									 <div class="col-md-6 btn-group pull-right"> 
+										<button ng-click="update()" class="btn btn-primary"
+											id="update" type="submit">Apply the Change</button>
+									<!-- </div> -->
+								</div>
+								</div>
+							</form>
+							<!-- END JQUERY VALIDATION PLUGIN -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE CONTENT WRAPPER -->
+		</div>
+				</div>	
+			</section>
+	<!-- END PAGE CONTAINER -->
+	
+	<!-- Start callaction Area -->
+			<section class="callaction-area relative section-gap">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+							<h1 class="text-white">Experience Great Support</h1>
+							<!-- <p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+							</p>
+							<a class="callaction-btn text-uppercase" href="#">Reach Our Support Team</a> -->	
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End callaction Area -->
+
+			
+						
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Quick links</h6>
+								<ul>
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Brand Assets</a></li>
+									<li><a href="#">Investor Relations</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Resources</h6>
+								<ul>
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Brand Assets</a></li>
+									<li><a href="#">Investor Relations</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>												
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="https://www.facebook.com/zoe.duan.7"><i class="fa fa-facebook"></i></a>
+									<a href="https://twitter.com/zoe_dyh"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>							
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Newsletter</h6>
+								<p>Stay update with our latest</p>
+								<!-- <div class="" id="mc_embed_signup">
+									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+			                            	<div style="position: absolute; left: -5000px;">
+												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+											</div>
+
+										<div class="info"></div>
+									</form>
+								</div> -->
+							</div>
+						</div>	
+						<p class="mt-50 mx-auto footer-text col-lg-12">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>											
+					</div>
+				</div>
+			</footer>	
+			<!-- End footer Area -->		
+	
+	
+
+	<!-- START PRELOADS -->
+<!-- 	<audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+	<audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio> -->
+	<!-- END PRELOADS -->
+	<!-- START SCRIPTS -->
+	<!-- START PLUGINS -->
+	<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript"
+		src="js/plugins/bootstrap/bootstrap.min.js"></script>
+	<!-- END PLUGINS -->
+	<!-- THIS PAGE PLUGINS -->
+	<script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+	<script type="text/javascript"
+		src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+	<script type='text/javascript'
+		src='js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+	<script type='text/javascript'
+		src='js/plugins/bootstrap/bootstrap-select.js'></script>
+	<script type='text/javascript'
+		src='js/plugins/validationengine/languages/jquery.validationEngine-en.js'></script>
+	<script type='text/javascript'
+		src='js/plugins/validationengine/jquery.validationEngine.js'></script>
+	<script type='text/javascript'
+		src='js/plugins/jquery-validation/jquery.validate.js'></script>
+	<script type='text/javascript'
+		src='js/plugins/maskedinput/jquery.maskedinput.min.js'></script>
+	<!-- END THIS PAGE PLUGINS -->
+	<!-- START TEMPLATE -->
+	<!-- <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script> 
+	<script type="text/javascript" src="js/actions.js"></script> -->
+	<!-- END TEMPLATE -->
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"
+		type="text/javascript">
+
+	</script>
+
+
+	<script type="text/javascript">
+		// Edit Profile - change fields from read only to editable ************************************
+		function editable() {
+			// By default, email, first name, last name cannot change.
+			document.getElementById("age").readOnly = false;
+			document.getElementById("password").readOnly = false;
+			document.getElementById("addressLine1").readOnly = false;
+			document.getElementById("addressLine2").readOnly = false;
+			document.getElementById("city").readOnly = false;
+			document.getElementById("state").readOnly = false;
+			document.getElementById("zip").readOnly = false;
+			document.getElementById("phone").readOnly = false;
+		}
+
+		$(document)
+				.ready(
+						function() {
+							var session = sessionStorage.getItem("userid");
+							var urls = "http://localhost:8080/getUser/"
+									+ session
+							//	alert(urls);
+							$
+									.ajax({
+										url : urls
+									})
+									.then(
+											function(data) {
+												document.getElementById("email").value = data.email;
+												document.getElementById("firstName").value = data.firstName;
+												document.getElementById("lastName").value = data.lastName;
+												//document.getElementById("trip").value = data.trips;
+												document.getElementById("password").value = data.password;
+												document.getElementById("age").value = data.age;
+												document.getElementById("addressLine1").value = data.addressLine1;
+												document.getElementById("addressLine2").value = data.addressLine2;
+												document.getElementById("city").value = data.city;
+												document.getElementById("state").value = data.state;
+												document.getElementById("phone").value = data.phone;
+												document.getElementById("zip").value = data.zip;
+												$('.profile-data-name')
+														.append(
+																data.firstName
+																		+ " "
+																		+ data.lastName);
+											});
+						});
+		
+		
+		var id = sessionStorage.getItem("userid");
+		var app = angular.module("userManagerApp", []);
+		app
+				.controller(
+						"userManagerController",
+						function($scope, $http) {
+							$http.defaults.headers.post["Content-Type"] = "application/json";
+							$scope.update = function(id) {
+								var Parameters = {
+									email : document.getElementById("email").value,
+									password : document
+											.getElementById("password").value,
+									firstName : document
+											.getElementById("firstName").value,
+									lastName : document
+											.getElementById("lastName").value,
+
+									age : document.getElementById("age").value,
+									addressLine1 : document
+											.getElementById("addressLine1").value,
+									addressLine2 : document
+											.getElementById("addressLine2").value,
+									city : document.getElementById("city").value,
+									state : document.getElementById("state").value,
+									phone : document.getElementById("phone").value,
+									zip : document.getElementById("zip").value
+								};
+								var userid = sessionStorage.getItem("userid");
+								if (userid == null) {
+									//alert("Fill Mandatory fields");
+								} else {
+									//alert("email " + JSON.stringify(Parameters));
+									$
+											.ajax(
+													{
+														url : "http://localhost:8080/updateUser/"
+																+ userid,
+														type : "PUT",
+														data : JSON
+																.stringify(Parameters),
+														contentType : 'application/json',
+														dataType : "json",
+														processdata : false
+
+													})
+											.then(
+													function(data) {
+														// if data not null, should display the alert
+														// NOTE: Comment above is NOT coded yet *********************************
+														//alert("Data updated successfully");
+														sessionStorage.setItem(
+																"userid",
+																data.id);
+														window.location
+																.replace("http://localhost:8080/view-profile.html");
+													});
+								}
+							}
+							
+							$scope.ageCheck = function() {
+								var age = $scope.age;
+								if (age > 200) {
+									document.getElementById("update").disabled = true;
+									document.getElementById("errorage").innerHTML = "Age is too big";
+								} else {
+									document.getElementById("update").disabled = false;
+									document.getElementById("errorage").innerHTML = "Age is ok";
+								}
+							} // end of $scope.pwdCheck function
+						});
+		// Validation for the client side ********************
+		var jvalidate = $("#jvalidate").validate({
+			ignore : [],
+			rules : {
+				login : {
+					required : true,
+					minlength : 2,
+					maxlength : 8
+				},
+				email : {
+					required : true,
+					email : true
+				},
+				password : {
+					required : true,
+					minlength : 5,
+					maxlength : 20
+				},
+				age : {
+					required : false,
+					min : 18,
+					max : 200
+				},
+				date : {
+					required : false,
+					date : true
+				},
+				credit : {
+					required : true,
+					creditcard : true
+				},
+				site : {
+					required : true,
+					url : true
+				}
+			}
+		});
+	</script>
+	<!-- END SCRIPTS -->
+</body>
+</html>
