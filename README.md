@@ -1,4 +1,4 @@
-# RallyBus
+# Panda Go
 Project for DATABASE Course
 
 
